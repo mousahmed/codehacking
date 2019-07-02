@@ -6,11 +6,12 @@
 
 @section('content')
     <div class="col-sm-3">
-        <img src="{{$record->photo? $record->photo->path : "http://placehold.it/400x400"}}" alt="" class="img-responsive img-rounded">
+        <img src="{{$record->photo? $record->photo->path : "http://placehold.it/400x400"}}" alt=""
+             class="img-responsive img-rounded">
     </div>
 
     <div class="col-sm-7">
-    {!! Form::model($record ,['method'=>'PATCH', 'action'=>['AdminUsersController@update',$record->id],'class'=>'form-horizontal','files'=>'true']) !!}
+        {!! Form::model($record ,['method'=>'PATCH', 'action'=>['AdminUsersController@update',$record->id],'class'=>'form-horizontal','files'=>'true']) !!}
         {{ csrf_field() }}
         <div class="form-group">
             {!! Form::label('name', 'Name:', ['class' =>'control-label']) !!}
@@ -48,12 +49,18 @@
         </div>
 
 
-        <div class="form-group">
-            {!! Form::submit('Edit User',['class'=>'btn btn-primary']) !!}
+        <div class="form-group pull-left">
+            {!! Form::submit('Update',['class'=>'btn btn-primary']) !!}
         </div>
 
         {!! Form::close() !!}
 
-    @include('errors.formErrors')
+
+        <div class="form-group pull-right ">
+            <a href="/admin/users/delete/confirm/{{$record->id}}" class="btn btn-danger">Delete</a>
+        </div>
+
+
+        @include('errors.formErrors')
     </div>
 @endsection

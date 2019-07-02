@@ -1,6 +1,20 @@
 @extends('layouts.admin')
+@section('header')
+    All Users
+@endsection
 @section('content')
-    <h1>All Users</h1>
+
+    @if(Session::has('deleted_user'))
+        <p class="alert alert-danger">{{session('deleted_user')}}</p>
+    @endif
+
+    @if(Session::has('created_user'))
+        <p class="alert alert-success">{{session('created_user')}}</p>
+    @endif
+
+    @if(Session::has('updated_user'))
+        <p class="alert alert-success">{{session('updated_user')}}</p>
+    @endif
     <table class="table table-bordered">
         <thead>
         <tr>
@@ -30,7 +44,7 @@
                     <td>{{$record->created_at->diffForHumans()}}</td>
                     <td>{{$record->updated_at->diffForHumans()}}</td>
                     <td><a href="{{route('admin.users.edit',$record->id)}}" class="btn btn-primary">Edit</a></td>
-                    <td><a href="{{route('admin.users.destroy',$record->id)}}" class="btn btn-danger">Delete</a></td>
+                    <td><a href="/admin/users/delete/confirm/{{$record->id}}" class="btn btn-danger">Delete</a></td>
                 </tr>
             @endforeach
         @endif

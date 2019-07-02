@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\UserEditRequest;
-use App\Http\Requests\UserRequest;
+use App\Category;
+use App\Http\Requests\PostCreateRequest;
 use App\Photo;
-use App\Role;
-use App\User;
+use App\Post;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
-class AdminUsersController extends Controller
+class AdminPostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,9 +21,9 @@ class AdminUsersController extends Controller
      */
     public function index()
     {
-        //
-        $records = User::all();
-        return view('admin.users.index',compact('records'));
+
+        $records = Post::all();
+        return view('admin.posts.index',compact('records'));
     }
 
     /**
@@ -34,8 +34,8 @@ class AdminUsersController extends Controller
     public function create()
     {
         //
-        $records = Role::lists('name','id')->all();
-        return view('admin.users.create',compact('records'));
+        $records = Category::lists('name','id')->all();
+        return view('admin.posts.create',compact('records'));
     }
 
     /**
@@ -44,16 +44,10 @@ class AdminUsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(UserRequest $request)
+    public function store(PostCreateRequest $request)
     {
-        //
-        if(trim($request->password)== ''){
-            $input = $request->except('password');
-        }else{
-            $input = $request->all();
-            $input['password'] = bcrypt($request->password);
-        }
-
+        $user = Auth::user();
+        $input = $request->all();
         if($file = $request->file('photo_id')){
             $name = time() . $file->getClientOriginalName();
             $file->move('images',$name);
@@ -61,11 +55,9 @@ class AdminUsersController extends Controller
             $input['photo_id'] = $photo->id;
 
         }
-
-            User::create($input);
-
-        Session::flash('created_user','The user has been created');
-        return redirect(route('admin.users.index'));
+        $user->posts()->create($input);
+        Session::flash('created_post','The post has been updated');
+        return redirect(route('admin.posts.index'));
     }
 
     /**
@@ -77,7 +69,8 @@ class AdminUsersController extends Controller
     public function show($id)
     {
         //
-        return view('admin.users.show');
+        $record = Post::findOrFail($id);
+        return view('admin.posts.show',compact('record'));
     }
 
     /**
@@ -89,10 +82,9 @@ class AdminUsersController extends Controller
     public function edit($id)
     {
         //
-
-        $record = User::findOrFail($id);
-        $roles = Role::lists('name','id')->all();
-        return view('admin.users.edit',compact('record','roles'));
+        $record = Post::findOrFail($id);
+        $categories = Category::lists('name','id')->all();
+        return view('admin.posts.edit',compact('record','categories'));
     }
 
     /**
@@ -102,16 +94,11 @@ class AdminUsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UserEditRequest $request, $id)
+    public function update(PostCreateRequest $request, $id)
     {
         //
-        if(trim($request->password)== ''){
-            $input = $request->except('password');
-        }else{
-            $input = $request->all();
-            $input['password'] = bcrypt($request->password);
-        }
-        $record = User::findOrFail($id);
+        $input = $request->all();
+        $record = Post::findOrFail($id);
         if($file = $request->file('photo_id')){
             unlink(public_path().$record->photo->path);
             $name = time() . $file->getClientOriginalName();
@@ -121,8 +108,9 @@ class AdminUsersController extends Controller
 
         }
         $record->update($input);
-        Session::flash('updated_user','The user has been updated');
-        return redirect(route("admin.users.index"));
+        Session::flash('updated_post','The post has been updated');
+        return redirect(route("admin.posts.index"));
+
     }
 
     /**
@@ -133,16 +121,17 @@ class AdminUsersController extends Controller
      */
     public function confirmDelete($id){
 
-        $record = User::findOrFail($id);
-        return view('admin.users.delete',compact('record'));
+        $record = Post::findOrFail($id);
+        return view('admin.posts.delete',compact('record'));
     }
+
     public function destroy($id)
     {
         //
-        $record = User::findOrFail($id);
+        $record = Post::findOrFail($id);
         unlink(public_path().$record->photo->path);
         $record->delete();
-        Session::flash('deleted_user','The user has been deleted');
-        return redirect(route('admin.users.index')) ;
+        Session::flash('deleted_post','The Post has been deleted');
+        return redirect(route('admin.posts.index')) ;
     }
 }

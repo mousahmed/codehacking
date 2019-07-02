@@ -12,7 +12,12 @@ class Photo extends Model
     public function user(){
         return $this->hasOne('App\User');
     }
+    public function post(){
+        return $this->hasOne('App\Post');
+    }
     public function getPathAttribute($photo){
         return $this->directory . $photo ;
     }
+
+
 }
