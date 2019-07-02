@@ -51,8 +51,10 @@
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
                 <li><a href="{{ url('/home') }}">Home</a></li>
-                @if(Auth::user()->role_id == 1)
-                    <li><a href="{{ url('/admin') }}">Admin</a></li>
+                @if(Auth::check())
+                    @if(Auth::user()->role_id == 1)
+                        <li><a href="{{ url('/admin') }}">Admin</a></li>
+                    @endif
                 @endif
             </ul>
 

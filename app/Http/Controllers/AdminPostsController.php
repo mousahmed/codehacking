@@ -132,7 +132,7 @@ class AdminPostsController extends Controller
         if($record->photo) {
             unlink(public_path().$record->photo->path);
             $record->photo()->delete();
-        };
+        }
         $record->delete();
         Session::flash('deleted_post','The Post has been deleted');
         return redirect(route('admin.posts.index')) ;
