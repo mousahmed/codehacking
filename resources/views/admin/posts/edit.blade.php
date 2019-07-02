@@ -29,15 +29,14 @@
         </div>
 
 
-        <div class="form-group pull-left">
-            {!! Form::submit('Update',['class'=>'btn btn-primary']) !!}
-        </div>
+        <div class="form-group ">
+            {!! Form::submit('Update',['class'=>'btn btn-primary pull-left']) !!}
+
 
         {!! Form::close() !!}
 
 
-        <div class="form-group pull-right ">
-            <a href="/admin/posts/delete/confirm/{{$record->id}}" class="btn btn-danger">Delete</a>
+            <a href="/admin/posts/delete/confirm/{{$record->id}}" class="btn btn-danger pull-right">Delete</a>
         </div>
 
 
