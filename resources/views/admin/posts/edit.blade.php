@@ -6,6 +6,12 @@
 
 @section('content')
 
+    <div class="col-sm-3">
+        <img src="{{$record->photo? $record->photo->path : "http://placehold.it/400x400"}}" alt=""
+             class="img-responsive img-rounded">
+    </div>
+    <div class="col-sm-9">
+
         {!! Form::model($record ,['method'=>'PATCH', 'action'=>['AdminPostsController@update',$record->id],'class'=>'form-horizontal','files'=>'true']) !!}
         {{ csrf_field() }}
         <div class="form-group">
@@ -41,5 +47,5 @@
 
 
         @include('errors.formErrors')
-
+    </div>
 @endsection

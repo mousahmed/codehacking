@@ -152,7 +152,6 @@ class AdminUsersController extends Controller
                     unlink(public_path() . $post->photo->path);
                     $post->photo()->delete();
                 }
-                $post->delete();
             }
         }
         $record->delete();
