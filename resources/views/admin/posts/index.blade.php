@@ -8,7 +8,7 @@
         <p class="alert alert-danger">{{session('deleted_post')}}</p>
     @endif
 
-    @if(Session::has('created_psot'))
+    @if(Session::has('created_post'))
         <p class="alert alert-success">{{session('created_post')}}</p>
     @endif
 

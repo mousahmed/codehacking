@@ -56,7 +56,7 @@ class AdminPostsController extends Controller
 
         }
         $user->posts()->create($input);
-        Session::flash('created_post','The post has been updated');
+        Session::flash('created_post','The post has been created');
         return redirect(route('admin.posts.index'));
     }
 

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('header')
-    Create Posts
+    Create Post
 @endsection
 @section('content')
 

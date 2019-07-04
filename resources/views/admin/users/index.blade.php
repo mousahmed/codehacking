@@ -37,7 +37,7 @@
                 <tr>
                     <th scope="row">{{$record->id}}</th>
                     <td><img height="60px" width="40px" src="{{$record->photo ? $record->photo->path : "http://placehold.it/50x50"}}" alt=""></td>
-                    <td>{{$record->name}}</td>
+                    <td><a href="{{route('admin.users.show',$record->id)}}">{{$record->name}}</a></td>
                     <td>{{$record->email}}</td>
                     <td>{{$record->role->name}}</td>
                     <td>{{($record->is_active === 1 ? 'Active':'Not Active')}}</td>
