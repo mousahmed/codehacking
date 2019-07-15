@@ -1,0 +1,333 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="PHP ignore problems" />
+    <inspection_tool class="AnnotationDeprecatedInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="AnnotationMissingUseInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="Annotator" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="MessDetectorValidationInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpAbstractStaticMethodInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpArrayFillCanBeConvertedToLoopInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="INFORMATION" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpArrayFilterCanBeConvertedToLoopInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="INFORMATION" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpArrayMapCanBeConvertedToLoopInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="INFORMATION" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpAssignmentInConditionInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpAssignmentReplaceableWithOperatorAssignmentInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="INFORMATION" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpAssignmentReplaceableWithPrefixExpressionInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="INFORMATION" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpCSFixerValidationInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpCSValidationInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpClassNamingConventionInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpComposerExtensionStubsInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpConstantNamingConventionInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpConstantReassignmentInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpConstructorStyleInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpDeprecationInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpDisabledExtensionStubsInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="INFORMATION" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpDivisionByZeroInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpDocMissingReturnTagInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpDocMissingThrowsInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpDocRedundantThrowsInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpDocSignatureInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpDuplicateArrayKeysInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpDuplicateCaseInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpDynamicAsStaticMethodCallInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpExpressionResultUnusedInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpForeachArrayIsUsedAsValueInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpForeachNestedOuterKeyValueVariablesConflictInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpFormatFunctionParametersMismatchInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpFullyQualifiedNameUsageInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpFunctionNamingConventionInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpGotoIntoLoopInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="ERROR" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpHierarchyChecksInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="ERROR" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpIgnoredClassAliasDeclaration" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpIllegalArrayKeyTypeInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpIllegalPsrClassPathInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpIllegalStringOffsetInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpIncludeInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpIncompatibleReturnTypeInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpInconsistentReturnPointsInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpInternalEntityUsedInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpInvalidMagicMethodModifiersInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpLanguageLevelInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="ERROR" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpLoopCanBeConvertedToArrayFillInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="INFORMATION" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpLoopCanBeConvertedToArrayFilterInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="INFORMATION" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpLoopCanBeConvertedToArrayMapInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="INFORMATION" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpMethodMayBeStaticInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="INFORMATION" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpMethodNamingConventionInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpMethodOrClassCallIsNotCaseSensitiveInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpMethodParametersCountMismatchInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpMissingBreakStatementInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpMissingDocCommentInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpMissingParentCallCommonInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpMissingParentCallMagicInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpMissingParentConstructorInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpMissingStrictTypesDeclarationInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpMultipleClassesDeclarationsInOneFile" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpNonCanonicalElementsOrderInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpNonCompoundUseInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpNonStrictObjectEqualityInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpOptionalBeforeRequiredParametersInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpParamsInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpPassByRefInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="ERROR" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpPropertyNamingConventionInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpRedundantCatchClauseInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpRedundantClosingTagInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpShortOpenTagInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpSignatureMismatchDuringInheritanceInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpSillyAssignmentInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpStatementHasEmptyBodyInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpStaticAsDynamicMethodCallInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpStrictTypeCheckingInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="ERROR" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpSuperClassIncompatibleWithInterfaceInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="ERROR" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpToStringImplementationInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpToStringReturnInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="ERROR" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpTooManyParametersInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpTraditionalSyntaxArrayLiteralInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUndefinedCallbackInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUndefinedClassConstantInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUndefinedClassInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUndefinedConstantInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUndefinedFieldInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUndefinedFunctionInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUndefinedGotoLabelInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUndefinedMethodInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUndefinedNamespaceInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUndefinedVariableInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="ERROR" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnhandledExceptionInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnitCoversFunctionWithoutScopeResolutionOperatorInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnitMissingTargetForTestInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="INFORMATION" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnitUndefinedDataProviderInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnnecessaryFullyQualifiedNameInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnreachableStatementInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnused" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnusedAliasInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnusedLocalVariableInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnusedParameterInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnusedPrivateFieldInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnusedPrivateMethodInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpUsageOfSilenceOperatorInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpVariableNamingConventionInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpVariableVariableInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WEAK WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpVoidFunctionResultUsedInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpWrongCatchClausesOrderInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpWrongForeachArgumentTypeInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpWrongStringConcatenationInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+    <inspection_tool class="RepositoryClassInspection" enabled="false" level="ERROR" enabled_by_default="false">
+      <scope name="Problems" level="WARNING" enabled="false" />
+    </inspection_tool>
+  </profile>
+</component>
