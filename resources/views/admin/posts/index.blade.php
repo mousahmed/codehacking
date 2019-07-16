@@ -42,7 +42,7 @@
                     <td>{{$record->user->name}}</td>
                     <td>{{$record->created_at->diffForHumans()}}</td>
                     <td>{{$record->updated_at->diffForHumans()}}</td>
-                    <td><a href="{{route('home.post',$record->id)}}" class="btn btn-primary">View Post</a></td>
+                    <td><a href="{{route('home.post',$record->slug)}}" class="btn btn-primary">View Post</a></td>
                     <td><a href="{{route('admin.posts.edit',$record->id)}}" class="btn btn-primary">Edit</a></td>
                     <td><a href="/admin/posts/delete/confirm/{{$record->id}}" class="btn btn-danger">Delete</a></td>
                 </tr>

@@ -138,8 +138,8 @@ class AdminPostsController extends Controller
         return redirect(route('admin.posts.index')) ;
     }
 
-    public function post($id){
-        $record = Post::findOrFail($id);
+    public function post($slug){
+        $record = Post::findBySlugOrFail($slug);
         $comments = $record->comments;
         return view('post',compact('record','comments'));
     }
