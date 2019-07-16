@@ -65,7 +65,7 @@
             @if($comment->is_active == 1)
                 <div class="media">
                     <a class="pull-left" href="#">
-                        <img class="media-object" height="64px" width="44px" src="{{$comment->photo}}" alt="">
+                        <img class="media-object" height="64px" width="44px" src="{{Auth::user()->gravatar}}" alt="">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">{{$comment->author}}
@@ -80,7 +80,7 @@
 
                                         <a class="pull-left" href="#">
                                             <img class="media-object" height="64px" width="44px"
-                                                 src="{{$reply->photo}}" alt="">
+                                                 src="{{Auth::user()->gravatar}}" alt="">
                                         </a>
                                         <div class="media-body">
                                             <h4 class="media-heading">{{$reply->author}}

@@ -20,6 +20,7 @@
                 <th scope="col">Created</th>
                 <th scope="col">Updated</th>
                 <th scope="col">Status</th>
+                <th scope="col">View</th>
                 <th scope="col">Show</th>
                 <th scope="col">Delete</th>
 
@@ -58,6 +59,7 @@
                             @endif
 
                         </td>
+                        <td><a href="{{route('home.post',$record->post->slug)}}" class="btn btn-primary">View Post</a></td>
                         <td><a href="{{route('admin.comments.show',$record->id)}}" class="btn btn-success">Show</a></td>
                         <td><a href="/admin/comments/delete/confirm/{{$record->id}}" class="btn btn-danger">Delete</a></td>
                     </tr>
