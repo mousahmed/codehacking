@@ -20,7 +20,6 @@ class Post extends Model
                 'source' => 'title',
                 'separator' => '-',
                 'includeTrashed' => true,
-                'onUpdate' => true,
             ]
         ];
     }

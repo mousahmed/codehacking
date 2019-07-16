@@ -34,7 +34,7 @@ class AdminPostsController extends Controller
     public function create()
     {
         //
-        $records = Category::lists('name','id')->all();
+        $records = Category::pluck('name','id')->all();
         return view('admin.posts.create',compact('records'));
     }
 
@@ -83,7 +83,7 @@ class AdminPostsController extends Controller
     {
         //
         $record = Post::findOrFail($id);
-        $categories = Category::lists('name','id')->all();
+        $categories = Category::pluck('name','id')->all();
         return view('admin.posts.edit',compact('record','categories'));
     }
 

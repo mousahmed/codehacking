@@ -65,7 +65,7 @@
             @if($comment->is_active == 1)
                 <div class="media">
                     <a class="pull-left" href="#">
-                        <img class="media-object" height="64px" width="44px" src="{{Auth::user()->gravatar}}" alt="">
+                        <img class="media-object" src="{{Auth::user()->gravatar}}" alt="">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">{{$comment->author}}
@@ -73,13 +73,14 @@
                         </h4>
                     {{$comment->content}}
                     <!-- Nested Comment -->
-                        <div class="nested-comment media" style="margin-top: 40px;">
-                            @if(count($comment->replies) > 0 )
-                                @foreach($comment->replies as $reply)
+
+                        @if(count($comment->replies) > 0 )
+                            @foreach($comment->replies as $reply)
+                                <div class="nested-comment media" style="margin-top: 40px;">
                                     @if($reply->is_active == 1)
 
                                         <a class="pull-left" href="#">
-                                            <img class="media-object" height="64px" width="44px"
+                                            <img class="media-object"
                                                  src="{{Auth::user()->gravatar}}" alt="">
                                         </a>
                                         <div class="media-body">
@@ -90,41 +91,43 @@
                                         </div>
 
                                     @endif
-                                @endforeach
-                            @endif
+                                </div>
+                            @endforeach
+                        @endif
 
-                            <div class="comment-reply-container">
-                                <button class="toggle-reply btn btn-primary pull-right">Reply</button>
-                                @if(Auth::check())
-                                    <div class="comment-reply col-sm-10">
-                                        <div class="well">
-                                            {!! Form::open(['method'=>'POST', 'action'=>'CommentRepliesController@createReply',]) !!}
-                                            {{ csrf_field() }}
-                                            <input type="hidden" name="comment_id" value={{$comment->id}}>
-                                            <div class="form-group">
-                                                <h4>
-                                                    {!! Form::label('content','Leave a Reply:', ['class' =>'control-label']) !!}
-                                                </h4>
-                                                {!! Form::textarea('content',null,['class'=>'form-control','rows'=>2]) !!}
-
-                                            </div>
-                                            <div class="form-group">
-                                                {!! Form::submit('Submit',['class'=>'btn btn-primary']) !!}
-                                            </div>
-
-                                            {!! Form::close() !!}
+                        <div class="comment-reply-container" style="margin-top: 20px">
+                            <button class="toggle-reply btn btn-primary pull-right">Reply</button>
+                            @if(Auth::check())
+                                <div class="comment-reply col-sm-10 " style="margin-top: 20px">
+                                    <div class="well">
+                                        {!! Form::open(['method'=>'POST', 'action'=>'CommentRepliesController@createReply',]) !!}
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="comment_id" value={{$comment->id}}>
+                                        <div class="form-group">
+                                            <h4>
+                                                {!! Form::label('content','Leave a Reply:', ['class' =>'control-label']) !!}
+                                            </h4>
+                                            {!! Form::textarea('content',null,['class'=>'form-control','rows'=>2]) !!}
 
                                         </div>
-                                    </div>
-                                @endif
+                                        <div class="form-group">
+                                            {!! Form::submit('Submit',['class'=>'btn btn-primary']) !!}
+                                        </div>
 
-                            </div>
-                            <!-- End Nested Comment -->
+                                        {!! Form::close() !!}
+
+                                    </div>
+                                </div>
+                        @endif
+
+
+                        <!-- End Nested Comment -->
                         </div>
-                        <hr>
+
                     </div>
                 </div>
             @endif
+            <hr>
         @endforeach
     @endif
 
