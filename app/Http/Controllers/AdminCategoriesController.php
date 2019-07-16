@@ -18,7 +18,7 @@ class AdminCategoriesController extends Controller
     public function index()
     {
         //
-        $records = Category::all();
+        $records = Category::paginate(3);
         return view('admin.categories.index',compact('records'));
     }
 

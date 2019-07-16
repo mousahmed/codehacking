@@ -14,7 +14,7 @@ class AdminPhotosController extends Controller
     public function index()
     {
 
-        $records = Photo::all();
+        $records = Photo::paginate(3);
         return view('admin.photos.index', compact('records'));
     }
 

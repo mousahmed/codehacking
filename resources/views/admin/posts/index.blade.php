@@ -52,6 +52,10 @@
         </tbody>
     </table>
     <a href="{{asset(route('admin.posts.create'))}}" class="btn btn-success">Create Posts</a>
-
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-5">
+            {{$records->render()}}
+        </div>
+    </div>
 
 @endsection
