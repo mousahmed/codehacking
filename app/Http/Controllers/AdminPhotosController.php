@@ -14,7 +14,7 @@ class AdminPhotosController extends Controller
     public function index()
     {
 
-        $records = Photo::paginate(3);
+        $records = Photo::paginate(10);
         return view('admin.photos.index', compact('records'));
     }
 
@@ -46,6 +46,17 @@ class AdminPhotosController extends Controller
         Session::flash('deleted_photo', 'The photo has been deleted');
         $record->delete();
 
+        return redirect(route('admin.photos.index'));
+    }
+    public function deletePhotos(Request $request){
+        if(is_numeric($request->checkBoxArray)) {
+            $records = Photo::findORFail($request->checkBoxArray);
+            foreach ($records as $record) {
+                unlink(public_path() . $record->path);
+                Session::flash('deleted_photo', 'The photo has been deleted');
+                $record->delete();
+            }
+        }
         return redirect(route('admin.photos.index'));
     }
 }

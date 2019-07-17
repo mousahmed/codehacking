@@ -27,6 +27,7 @@ Route::group(['middleware'=>'admin'],function(){
     Route::get('/admin',function(){
         return view('admin.index');
     });
+
     Route::post('/comment/reply','CommentRepliesController@createReply');
     Route::post('/comment','CommentRepliesController@createcomment');
     Route::resource('admin/users','AdminUsersController',['names'=>[
@@ -85,5 +86,6 @@ Route::group(['middleware'=>'admin'],function(){
         'show' =>'admin.comment.replies.show',
 
     ]]);
+    Route::delete('admin/delete/photos','AdminPhotosController@deletePhotos');
 });
 

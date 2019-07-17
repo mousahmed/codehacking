@@ -8,9 +8,23 @@
         <p class="alert alert-danger">{{session('deleted_photo')}}</p>
     @endif
 
+    <form action="delete/photos" method="post" class="form-inline">
+        {{csrf_field()}}
+        {{method_field('delete')}}
+        <div class="form-group">
+            <select name="checkBoxArray" class="form-control">
+                <option  value="">Delete</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="submit" name="" class="btn btn-primary ">
+        </div>
+
+
     <table class="table table-bordered">
         <thead>
         <tr>
+            <th scope="col"><input type="checkbox" id="options"></th>
             <th scope="col">ID</th>
             <th scope="col">Photo</th>
             <th scope="col">Belongs To</th>
@@ -23,8 +37,11 @@
         </thead>
         <tbody>
         @if($records)
+
             @foreach($records as $record)
                 <tr>
+                    <td><input type="checkbox" class="checkBoxes" name="checkBoxArray[]" value={{$record->id}}></td>
+
                     <th scope="row">{{$loop->iteration}}</th>
                     <td><img height="60px" width="40px" src="{{$record->path}}" alt=""></td>
                     <td>
@@ -49,5 +66,27 @@
             {{$records->render()}}
         </div>
     </div>
-
+    </form>
 @endsection
+@section('scripts')
+    <script>
+    $(document).ready(function(){
+
+        $('#options').click(function(){
+
+            if(this.checked){
+                $('.checkBoxes').each(function(){
+                   this.checked = true ;
+                });
+            }else{
+                $('.checkBoxes').each(function(){
+                    this.checked = false ;
+                });
+            }
+
+    });
+
+    });
+    </script>
+@endsection
+
