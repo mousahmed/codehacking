@@ -31,7 +31,7 @@
         @if($records)
             @foreach($records as $record)
                 <tr>
-                    <th scope="row">{{$record->id}}</th>
+                    <th scope="row">{{$loop->iteration}}</th>
                     <td><a href="{{route('admin.categories.show',$record->id)}}">{{$record->name}}</a></td>
                     <td>{{$record->created_at->diffForHumans()}}</td>
                     <td>{{$record->updated_at->diffForHumans()}}</td>

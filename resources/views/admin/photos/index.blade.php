@@ -25,7 +25,7 @@
         @if($records)
             @foreach($records as $record)
                 <tr>
-                    <th scope="row">{{$record->id}}</th>
+                    <th scope="row">{{$loop->iteration}}</th>
                     <td><img height="60px" width="40px" src="{{$record->path}}" alt=""></td>
                     <td>
                         @if($record->user) {{'User/ ' . $record->user->name }}

@@ -20,12 +20,12 @@
     <hr>
 
     <!-- Preview Image -->
-    <img height="400px" width="600px" class="img-responsive" src="{{$record->photo->path}}" alt="">
+    <img height="400px" width="600px" class="img-responsive" src="{{$record->photo ? $record->photo->path :  $record->photoPlaceHolder()}}" alt="">
 
     <hr>
 
     <!-- Post Content -->
-    <p>{{$record->content}}</p>
+    <p>{!! $record->content !!}</p>
 
     <hr>
     @if(Auth::check())

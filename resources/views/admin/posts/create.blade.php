@@ -3,7 +3,7 @@
     Create Post
 @endsection
 @section('content')
-
+@include('includes.tinyeditor')
     {!! Form::open(['method'=>'Post', 'action'=>'AdminPostsController@store','class'=>'form-horizontal','files'=>'true']) !!}
     {{ csrf_field() }}
     <div class="form-group">

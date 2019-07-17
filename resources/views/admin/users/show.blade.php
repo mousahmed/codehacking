@@ -23,7 +23,7 @@
         @if($record)
             @foreach($record->posts as $post)
                 <tr>
-                    <th scope="row">{{$post->id}}</th>
+                    <th scope="row">{{$loop->iteration}}</th>
                     <td><img height="60px" width="40px" src="{{$post->photo ? $post->photo->path : "http://placehold.it/50x50"}}" alt=""></td>
                     <td><a href="{{route('admin.posts.show',$post->id)}}">{{$post->title}}</a></td>
                     <td>{{$post->category->name}}</td>

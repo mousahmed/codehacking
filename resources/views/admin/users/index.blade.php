@@ -35,7 +35,7 @@
         @if($records)
             @foreach($records as $record)
                 <tr>
-                    <th scope="row">{{$record->id}}</th>
+                    <th scope="row">{{$loop->iteration}}</th>
                     <td><img  src="{{$record->gravatar ? $record->gravatar : "http://placehold.it/50x50"}}" alt=""></td>
                     <td><a href="{{route('admin.users.show',$record->id)}}">{{$record->name}}</a></td>
                     <td>{{$record->email}}</td>

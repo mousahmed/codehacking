@@ -35,7 +35,7 @@
         @if($records)
             @foreach($records as $record)
                 <tr>
-                    <th scope="row">{{$record->id}}</th>
+                    <th scope="row">{{$loop->iteration}}</th>
                     <td><img height="60px" width="40px" src="{{$record->photo ? $record->photo->path : "http://placehold.it/50x50"}}" alt=""></td>
                     <td><a href="{{route('admin.posts.show',$record->id)}}">{{$record->title}}</a></td>
                     <td>{{$record->category->name}}</td>

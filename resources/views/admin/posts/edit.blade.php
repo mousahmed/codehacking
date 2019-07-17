@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-
+    @include('includes.tinyeditor')
     <div class="col-sm-3">
         <img src="{{$record->photo? $record->photo->path : "http://placehold.it/400x400"}}" alt=""
              class="img-responsive img-rounded">
