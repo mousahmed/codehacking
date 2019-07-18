@@ -40,8 +40,8 @@
                     <td><a href="{{route('admin.posts.show',$record->id)}}">{{$record->title}}</a></td>
                     <td>{{$record->category->name}}</td>
                     <td>{{$record->user->name}}</td>
-                    <td>{{$record->created_at->diffForHumans()}}</td>
-                    <td>{{$record->updated_at->diffForHumans()}}</td>
+                    <td>{{$record->created_at->format('j F Y h:i A')}}</td>
+                    <td>{{$record->updated_at->format('j F Y h:i A')}}</td>
                     <td><a href="{{route('home.post',$record->slug)}}" class="btn btn-primary">View Post</a></td>
                     <td><a href="{{route('admin.posts.edit',$record->id)}}" class="btn btn-primary">Edit</a></td>
                     <td><a href="/admin/posts/delete/confirm/{{$record->id}}" class="btn btn-danger">Delete</a></td>

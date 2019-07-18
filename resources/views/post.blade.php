@@ -1,8 +1,8 @@
-@extends('layouts.blog-post')
+@extends('layouts.blog-home')
 
 @section('content')
     <!-- Blog Post -->
-
+    <div class="col-md-8">
     <!-- Title -->
     <h1>{{$record->title}}</h1>
 
@@ -51,6 +51,7 @@
 
 
     <script id="dsq-count-scr" src="//codehacking-rvljm81qeh.disqus.com/count.js" async></script>
+    </div>
 @endsection
 
 @section('scripts')
