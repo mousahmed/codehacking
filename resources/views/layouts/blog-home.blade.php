@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Laravel - Moustafa</title>
+    <title>Laravel - Moustafa Ahmed</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
@@ -32,13 +32,6 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
             <a class="navbar-brand" href="/">Home</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,12 +43,7 @@
                         <li><a href="{{ url('/admin') }}">Admin</a></li>
                     @endif
                 @endif
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
@@ -106,31 +94,16 @@
 
             <!-- Blog Categories Well -->
             <div class="well">
-                <h4>Blog Categories</h4>
+                <h4>Categories</h4>
                 <div class="row">
                     <div class="col-lg-6">
                         <ul class="list-unstyled">
-                            <li><a href="#">Category Name</a>
-                            </li>
-                            <li><a href="#">Category Name</a>
-                            </li>
-                            <li><a href="#">Category Name</a>
-                            </li>
-                            <li><a href="#">Category Name</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                        <ul class="list-unstyled">
-                            <li><a href="#">Category Name</a>
-                            </li>
-                            <li><a href="#">Category Name</a>
-                            </li>
-                            <li><a href="#">Category Name</a>
-                            </li>
-                            <li><a href="#">Category Name</a>
-                            </li>
+                            @if($categories)
+                                @foreach($categories as $category)
+                                    <li><a href="/{{$category->id}}/posts">{{$category->name}}</a>
+                                    </li>
+                                @endforeach
+                            @endif
                         </ul>
                     </div>
                     <!-- /.col-lg-6 -->

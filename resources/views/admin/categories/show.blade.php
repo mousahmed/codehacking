@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('header')
-   Category {{$record->name}} Posts
+    Category {{$record->name}} Posts
 @endsection
 
 @section('content')
@@ -24,7 +24,8 @@
             @foreach($record->posts as $post)
                 <tr>
                     <th scope="row">{{$loop->iteration}}</th>
-                    <td><img height="60px" width="40px" src="{{$post->photo ? $post->photo->path : "http://placehold.it/50x50"}}" alt=""></td>
+                    <td><img height="60px" width="40px"
+                             src="{{$post->photo ? $post->photo->path : "http://placehold.it/50x50"}}" alt=""></td>
                     <td><a href="{{route('admin.posts.show',$post->id)}}">{{$post->title}}</a></td>
                     <td>{{$post->user->name}}</td>
                     <td>{{$post->created_at->diffForHumans()}}</td>

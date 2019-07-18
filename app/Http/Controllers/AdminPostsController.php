@@ -141,6 +141,7 @@ class AdminPostsController extends Controller
     public function post($slug){
         $record = Post::findBySlugOrFail($slug);
         $comments = $record->comments;
-        return view('post',compact('record','comments'));
+        $categories = Category::all();
+        return view('post',compact('record','comments','categories'));
     }
 }

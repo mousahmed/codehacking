@@ -1,15 +1,16 @@
 @extends('layouts.blog-home')
 
+
+
 @section('content')
 
-    <!-- Blog Entries Column -->
     <div class="col-md-8">
-        <h1 class="page-header">
-            Laravel Project
-            <small>By Moustafa Ahmed</small>
-        </h1>
-    @if($records)
-        @foreach($records as $record)
+        <h2 class="page-header">
+            {{$category->name}} Posts
+
+        </h2>
+    @if(count($category->posts) > 0)
+        @foreach($category->posts as $record)
 
             <!-- First Blog Post -->
                 <h2>
@@ -33,13 +34,12 @@
 
             @endforeach
         <!-- Pager -->
-            <div class="pager">
-                {{$records->render()}}
-            </div>
+
         @else
-            <h2>No posts are published yet </h2>
+            <h2>No posts for {{$category->name}} category yet </h2>
         @endif
 
 
     </div>
+
 @endsection

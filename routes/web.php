@@ -17,6 +17,7 @@ if (version_compare(PHP_VERSION, '7.2.0', '>=')) {
 Route::get('/', 'HomeController@index');
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index');
+Route::get('/{id}/posts', 'HomeController@categoryPosts');
 Route::get('/post/{id}', ['as' => 'home.post', 'uses' => 'AdminPostsController@post']);
 Auth::routes();
 
