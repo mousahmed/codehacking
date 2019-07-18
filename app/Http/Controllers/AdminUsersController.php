@@ -22,7 +22,7 @@ class AdminUsersController extends Controller
     public function index()
     {
         //
-        $records = User::paginate(3);
+        $records = User::paginate(10);
         return view('admin.users.index', compact('records'));
     }
 
